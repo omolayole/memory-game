@@ -7,6 +7,8 @@ const symbols = ["fa fa-diamond", "fa fa-diamond", "fa fa-paper-plane-o", "fa fa
 
 const cardsContainer = document.querySelector('.deck');
 
+let openCards = [];
+
 /*
  * Display the cards on the page
  *   - shuffle the list of cards using the provided "shuffle" method below

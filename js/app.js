@@ -104,3 +104,20 @@ function compare(currentCard, previousCard) {
     }
 
 }
+
+//check if game is over!
+function isGameOver() {
+    if (matchedCards.length === symbols.length) {
+
+        //popup congratulation message
+        const modal = document.querySelector('.modal');
+        const playAgain = document.querySelector('.play-again')
+        modal.style.display = "block";
+        playAgain.addEventListener("click", function() {
+            modal.style.display = "none";
+
+            //call restartGame function
+            restartGame();
+        });     
+    }
+}

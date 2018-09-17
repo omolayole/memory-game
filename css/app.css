@@ -116,6 +116,11 @@ h1 {
     cursor: pointer;
 }
 
+.score-panel .timer {
+    float: right;
+    margin: 0 15px;
+}
+
 /*
  * modal box
  */

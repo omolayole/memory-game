@@ -140,3 +140,15 @@ const restartButton = document.querySelector('.restart');
 restartButton.addEventListener('click', function() {
     restartGame();
 });
+
+//create move counter function
+const movesContainer = document.querySelector('.moves');
+let moves = 0;
+movesContainer.innerHTML = 0;
+function moveCounter() {
+    moves++;
+    movesContainer.innerHTML = moves;
+
+    //set the star rating
+    starRating();
+}

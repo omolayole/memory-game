@@ -121,3 +121,16 @@ function isGameOver() {
         });     
     }
 }
+
+//create the restart game function
+function restartGame() {
+    //Delete all cards
+    cardsContainer.innerHTML = "";
+
+    //call `createGameBoard` to create a new card
+    createGameBoard();
+
+    //reset any related variables
+    matchedCards = [];
+        
+}

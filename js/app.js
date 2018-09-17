@@ -135,6 +135,18 @@ function restartGame() {
 
     //reset any related variables
     matchedCards = [];
+    moves = 0;
+    movesContainer.innerHTML = moves;
+    starsContainer.innerHTML = `<li><i class="fa fa-star"></i></li>
+    <li><i class="fa fa-star"></i></li>
+    <li><i class="fa fa-star"></i></li>`;
+
+    //reset timer 
+    clearInterval(interval);
+	seconds = "00";
+	minutes = "00";
+	appendSeconds.innerHTML = seconds;
+    appendMinutes.innerHTML = minutes;
         
 }
 
@@ -174,4 +186,32 @@ function starRating() {
         <li><i class="fa fa-star"></i></li>
         <li><i class="fa fa-star"></i></li>`;
     }
+}
+
+//create timer function
+const appendSeconds = document.querySelector('#seconds');
+const appendMinutes = document.querySelector('#minutes');
+let seconds = 0;
+let minutes = 0;
+let interval;
+function startTimer() {
+    seconds++;
+    if (seconds <= 9) {
+        appendSeconds.innerHTML = "0" + seconds;
+    } else {
+        appendSeconds.innerHTML = seconds;
+    }
+
+    /* check if seconds is equal to 60 and add a +1 to minutes, and set seconds to 0 */ 
+    if (seconds === 60) {  
+        minutes++; 
+        appendMinutes.innerHTML = "0" + minutes;
+        seconds = 0;
+        appendSeconds.innerHTML = "0" + 0;
+    } 
+
+    if (minutes > 9) {
+        appendMinutes.innerHTML = minutes;
+    }
+
 }

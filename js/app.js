@@ -58,6 +58,10 @@ function click(card) {
         const currentCard = this;
         const previousCard = openCards[0];
 
+        //call startTimer function
+        clearInterval(interval);
+        interval = setInterval(startTimer, 1000)
+
         //check for an existing opened cards
         if (openCards.length === 1) {
 

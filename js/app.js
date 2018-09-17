@@ -134,3 +134,9 @@ function restartGame() {
     matchedCards = [];
         
 }
+
+//restart button
+const restartButton = document.querySelector('.restart');
+restartButton.addEventListener('click', function() {
+    restartGame();
+});

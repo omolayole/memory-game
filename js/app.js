@@ -8,6 +8,7 @@ const symbols = ["fa fa-diamond", "fa fa-diamond", "fa fa-paper-plane-o", "fa fa
 const cardsContainer = document.querySelector('.deck');
 
 let openCards = [];
+let matchedCards = [];
 
 /*
  * Display the cards on the page
@@ -74,3 +75,32 @@ function click(card) {
     });
 }
 
+//compare two cards
+function compare(currentCard, previousCard) {
+    if (currentCard.innerHTML === previousCard.innerHTML) {
+
+        //matched
+        currentCard.classList.add("match");
+        previousCard.classList.add("match");
+
+        matchedCards.push(currentCard, previousCard);
+
+        openCards = [];
+
+        //check if game is over 
+        isGameOver();
+
+    } else {
+        currentCard.classList.add("unmatch");
+        previousCard.classList.add("unmatch");
+
+        //wait 500ms, then do this
+        setTimeout(function() {
+            
+            currentCard.classList.remove("open", "show", "disable", "unmatch");
+            previousCard.classList.remove("open", "show", "disable", "unmatch");
+            openCards = [];
+        }, 500);
+    }
+
+}

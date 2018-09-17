@@ -155,3 +155,23 @@ function moveCounter() {
     //set the star rating
     starRating();
 }
+
+//create stars rating function
+const starsContainer = document.querySelector('.stars');
+function starRating() {
+    if (moves >= 17  && moves <= 20) {
+        starsContainer.innerHTML = `<li><i class="fa fa-star"></i></li>
+        <li><i class="fa fa-star"></i></li>`;
+    } else if (moves > 20) {
+        starsContainer.innerHTML = `<li><i class="fa fa-star"></i></li>`;
+    } else if (moves <= 16) {
+        starsContainer.innerHTML = `<li><i class="fa fa-star"></i></li>
+        <li><i class="fa fa-star"></i></li>
+        <li><i class="fa fa-star"></i></li>
+        <li><i class="fa fa-star"></i></li>`;
+    } else {
+        starsContainer.innerHTML = `<li><i class="fa fa-star"></i></li>
+        <li><i class="fa fa-star"></i></li>
+        <li><i class="fa fa-star"></i></li>`;
+    }
+}

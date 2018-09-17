@@ -103,6 +103,9 @@ function compare(currentCard, previousCard) {
         }, 500);
     }
 
+    //call the move counter function
+    moveCounter();
+
 }
 
 //check if game is over!

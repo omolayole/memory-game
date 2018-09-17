@@ -46,3 +46,29 @@ function createGameBoard() {
     }
 }
 
+//call the createGameBoard function
+createGameBoard();
+
+//create the click function
+function click(card) {
+    card.addEventListener('click', function() {
+        const currentCard = this;
+        const previousCard = openCards[0];
+
+        //check for an existing opened cards
+        if (openCards.length === 1) {
+
+            card.classList.add("open", "show", "disable");
+            openCards.push(this);
+
+            //compare our two opened card
+            compare(currentCard, previousCard);
+
+        } else {
+            //check for no existing opened cards
+            currentCard.classList.add("open", "show", "disable");
+            openCards.push(this);
+        }
+    });
+}
+

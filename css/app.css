@@ -81,6 +81,10 @@ h1 {
     font-size: 33px;
 }
 
+.deck .card.disable {
+    pointer-events: none;
+}
+
 .deck .card.unmatch {
     background-color: #ef3939;
 }

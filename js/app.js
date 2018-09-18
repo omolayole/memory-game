@@ -168,6 +168,9 @@ function moveCounter() {
     moves++;
     movesContainer.innerHTML = moves;
 
+    //display moves in the congratulation message
+    document.querySelector("#moves").innerHTML = moves;
+
     //set the star rating
     starRating();
 }

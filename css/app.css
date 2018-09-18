@@ -76,10 +76,23 @@ h1 {
     font-size: 33px;
 }
 
+@keyframes rotateCard {
+    from {
+        transform: rotate(0deg);
+    }
+    
+    to {
+        transform: rotate(45deg);
+    }
+
+}
+
 .deck .card.match {
     cursor: default;
     background: #02ccba;
     font-size: 33px;
+    animation-name: rotateCard;
+    animation-duration: 1s;
 }
 
 .deck .card.disable {

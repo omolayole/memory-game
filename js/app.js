@@ -151,7 +151,9 @@ function restartGame() {
 	minutes = "00";
 	appendSeconds.innerHTML = seconds;
     appendMinutes.innerHTML = minutes;
-        
+
+    //reset the number of stars
+    numOfStars = 0;     
 }
 
 //restart button
@@ -177,10 +179,12 @@ function moveCounter() {
 
 //create stars rating function
 const starsContainer = document.querySelector('.stars');
+let numOfStars = 0;
 function starRating() {
     if (moves >= 17  && moves <= 20) {
         starsContainer.innerHTML = `<li><i class="fa fa-star"></i></li>
         <li><i class="fa fa-star"></i></li>`;
+        numOfStars = 2;
     } else if (moves > 20) {
         starsContainer.innerHTML = `<li><i class="fa fa-star"></i></li>`;
     } else if (moves <= 16) {
@@ -188,11 +192,16 @@ function starRating() {
         <li><i class="fa fa-star"></i></li>
         <li><i class="fa fa-star"></i></li>
         <li><i class="fa fa-star"></i></li>`;
+        numOfStars = 4;
     } else {
         starsContainer.innerHTML = `<li><i class="fa fa-star"></i></li>
         <li><i class="fa fa-star"></i></li>
         <li><i class="fa fa-star"></i></li>`;
+        numOfStars = 3;
     }
+
+    //display the number of stars
+    document.querySelector('#stars').innerHTML = numOfStars;
 }
 
 //create timer function

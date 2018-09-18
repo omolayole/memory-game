@@ -2,19 +2,26 @@
 
 ## Table of Contents
 
-* [Instructions](#instructions)
-* [Contributing](#contributing)
+* [About the Game](#abouttheGame)
+* [How To Play The Game](#HowToPlayTheGame)
+* [Link](#Link)
 
-## Instructions
+## About the Game
 
-The starter project has some HTML and CSS styling to display a static version of the Memory Game project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
+The game is a complete browser-based card matching game (also known as Concentration). The game board consists of sixteen "cards" arranged in a grid. The deck is made up of eight different pairs of cards, each with different symbols on one side. The cards are arranged randomly on the grid with the symbol face down. 
 
-To get started, open `js/app.js` and start building out the app's functionality
+The game is build with HTML, CSS and JavaScipt.
 
-For specific, detailed instructions, look at the project instructions in the [Udacity Classroom](https://classroom.udacity.com/me).
+## How To Play The Game
 
-## Contributing
+You are to flip over two hidden cards at a time to locate the ones that match.
+Follow these steps to play the game:
 
-This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
+1. Flips one card over by clicking the card to reveal its underlying symbol.
+2. Then turns over a second card, trying to find the corresponding card with the same symbol.
+3. If the cards match, both cards stay flipped over.
+4. If the cards do not match, both cards are flipped face down.
+5. The game ends once all cards have been correctly matched.
 
-For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
+## Link
+To view live page, click [here](https://omolayole.github.io/memory-game/).

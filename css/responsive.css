@@ -17,3 +17,18 @@
 		font-size: 20px;
 	}
 }
+
+@media screen and (max-width: 380px) {
+	.score-panel {
+		width: 70%;
+		font-size: 14px;
+	}
+
+	.modal h2 {
+		font-size: 18px;
+	}
+
+	.modal p, .modal .play-again {
+		font-size: 14px;
+	}
+}

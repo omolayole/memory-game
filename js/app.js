@@ -230,4 +230,8 @@ function startTimer() {
         appendMinutes.innerHTML = minutes;
     }
 
+    //display the time the game is completed
+    document.querySelector(".minutes").innerHTML = minutes + " min ";
+    document.querySelector(".seconds").innerHTML = seconds + " secs";
+
 }

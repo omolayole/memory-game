@@ -115,7 +115,9 @@ function compare(currentCard, previousCard) {
 //check if game is over!
 function isGameOver() {
     if (matchedCards.length === symbols.length) {
-
+        //stop timer
+        clearInterval(interval);
+        
         //popup congratulation message
         const modal = document.querySelector('.modal');
         const playAgain = document.querySelector('.play-again')

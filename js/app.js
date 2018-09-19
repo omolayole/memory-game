@@ -120,7 +120,7 @@ function isGameOver() {
         
         //popup congratulation message
         const modal = document.querySelector('.modal');
-        const playAgain = document.querySelector('.play-again')
+        const playAgain = document.querySelector('.play-again');
         modal.style.display = "block";
         playAgain.addEventListener("click", function() {
             modal.style.display = "none";
